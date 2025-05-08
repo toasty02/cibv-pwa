@@ -18,7 +18,8 @@ export default function Schedule({ matchesToday, matchesTomorrow }) {
   const todayLabel = today.toLocaleDateString(undefined, { weekday: 'long' })
   const tomorrowLabel = tomorrow.toLocaleDateString(undefined, { weekday: 'long' })
 
-  const displayedMatches = activeTab === 'today' ? matchesToday : matchesTomorrow
+  const displayedMatches = (activeTab === 'today' ? matchesToday : matchesTomorrow)
+  .filter(m => m.HomeTeam?.toLowerCase() !== m.AwayTeam?.toLowerCase());
 
   const tabButtons = (
     <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>

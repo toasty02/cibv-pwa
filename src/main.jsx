@@ -8,7 +8,7 @@ import { registerSW } from 'virtual:pwa-register'
 registerSW()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/cibv-pwa">
     <App />
   </BrowserRouter>
 )

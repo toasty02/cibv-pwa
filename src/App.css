@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -62,4 +62,8 @@
   33%  { content: "."; }
   66%  { content: ".."; }
   100% { content: "..."; }
+}
+
+.scroll-container {
+  overflow-y: auto;
 }

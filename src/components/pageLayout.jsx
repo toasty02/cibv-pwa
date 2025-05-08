@@ -1,7 +1,9 @@
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function PageLayout({ title, headerContent, children }) {
-  const navigate = useNavigate()
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isTeamDetails = location.pathname.startsWith('/team/');
 
   return (
     <div style={{
@@ -28,7 +30,7 @@ export default function PageLayout({ title, headerContent, children }) {
       </div>
 
       {/* Main Scrollable Content */}
-      <div style={{
+      <div className="scroll-container" style={{
         flex: 1,
         overflowY: 'auto',
         padding: '1rem',
@@ -50,7 +52,7 @@ export default function PageLayout({ title, headerContent, children }) {
         boxSizing: 'border-box'
       }}>
         <button
-          onClick={() => navigate('/')}
+          onClick={() => isTeamDetails ? navigate(-1) : navigate('/')}
           style={{
             padding: '0.75rem 1.5rem',
             backgroundColor: '#388e3c',
@@ -62,9 +64,9 @@ export default function PageLayout({ title, headerContent, children }) {
             width: '100%'
           }}
         >
-          ⬅ Home
+          {isTeamDetails ? 'Back' : 'Home'}
         </button>
       </div>
     </div>
-  )
+  );
 }

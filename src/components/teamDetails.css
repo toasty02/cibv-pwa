@@ -1,0 +1,16 @@
+.team-stats {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+  .ladder-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .ladder-table th,
+  .ladder-table td {
+    padding: 0.5rem;
+    border: 1px solid #444;
+    text-align: center;
+  }
+  

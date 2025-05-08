@@ -1,0 +1,58 @@
+.ladder-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #fff;
+  }
+  
+  .ladder-table th,
+  .ladder-table td {
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+    border-bottom: 1px solid #444;
+  }
+  
+  .ladder-table th {
+    font-weight: bold;
+    background-color: #222;
+  }
+  
+  .ladder-table td:first-child {
+    text-align: left;
+  }
+  
+  .ladder-table tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  
+  .ladder-table tr:hover {
+    background-color: #333;
+  }  
+
+  select {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    margin-top: 0.5rem;
+    appearance: none;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #00aaff;
+    box-shadow: 0 0 0 2px rgba(0, 170, 255, 0.4);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #ccc;
+  }
+  
